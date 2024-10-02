@@ -18,7 +18,7 @@ recipeClosebtn.addEventListener("click",()=>{
 
 //fetching recipes in api and displaying img,name..
 const fetchRecipes= async (query)  => {
-    recipeContainer.innerHTML="<h2><b>Fetching Recipes...</b></h2>";
+    recipeContainer.innerHTML="<h2><b>Fetching Recipes..</b></h2>";
     try{
         const response= await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`);
         const data= await response.json();
