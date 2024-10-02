@@ -39,7 +39,7 @@ nav form button[type="submit"]
     cursor:pointer;
 }
 nav form button[type="submit"]:hover,.recipe button:hover , .btn-style:hover{
-    background-color:rgb(247, 119, 84);
+    background-color:rgb(247, 119, 83);
 }
 
 /* Main Section */
