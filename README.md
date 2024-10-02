@@ -1,15 +1,13 @@
 # Recipe App
 
-## Description
-A web application that allows users to search for ingredients and view a list of related recipes. Each recipe includes detailed descriptions, helping users explore different cooking options.
+#Overview
+The API-Driven Recipe Application is a dynamic web application that allows users to explore a wide variety of recipes by leveraging an external API. With a user-friendly interface, this application enables seamless recipe searching, providing detailed information about ingredients and cooking instructions.
 
-## Features
-- User-friendly search functionality
-- Fetch recipes using a custom API
-- Display of recipe details
+#Features
+Recipe Search: Users can search for recipes by keywords, discovering new and exciting dishes.
+Detailed Recipe Information: Each recipe includes comprehensive details such as ingredients and instructions.
 
-## Technologies Used
-- HTML
-- CSS
-- JavaScript
-- API Development (mention any specific technologies/frameworks used)
+#Technologies Used
+HTML: For structuring the content.
+CSS: For styling the application and ensuring a responsive design.
+JavaScript: For implementing interactive features and making API calls to retrieve recipe data.
