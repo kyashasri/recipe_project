@@ -1,11 +1,13 @@
 const searchbox=document.querySelector(".searchbox");
 const searchbtn=document.querySelector(".searchbtn");
-const recipeContainer=document.querySelector(".recipe-container");
+const recipeContainer=document.querySelector(".recipe-container.rcont");
 const recipeDetailscont=document.querySelector(".recipe-details-cont");
 const recipeClosebtn=document.querySelector(".recipe-closebtn");
 const recipeDetails=document.querySelector(".recipe-details");
 
 recipeClosebtn.classList.add("btn-style");
+
+
 
 //closing the recipebox
 recipeClosebtn.addEventListener("click",()=>{
@@ -17,11 +19,16 @@ recipeClosebtn.addEventListener("click",()=>{
 
 
 //fetching recipes in api and displaying img,name..
+
 const fetchRecipes= async (query)  => {
-    recipeContainer.innerHTML="<h2><b>Fetching Recipes..</b></h2>";
+    recipeContainer.innerHTML="";
+    recipeContainer.classList.remove("rcont");
+
+    recipeContainer.innerHTML="<h2 style='color:white; font-size:30px'<b>Fetching Recipes..</b></h2>";
     try{
         const response= await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`);
         const data= await response.json();
+        console.log(data);
 
         recipeContainer.innerHTML= "";
         data.meals.forEach( meal => {
@@ -45,7 +52,7 @@ const fetchRecipes= async (query)  => {
         });
     }
     catch(error){
-        recipeContainer.innerHTML=`<h2>Error in Fetching Recipes...</h2>`;
+        recipeContainer.innerHTML=`<h2 style="color:white; font-size:30px;">Error in Fetching Recipes...</h2>`;
     }
 }
 
@@ -99,5 +106,6 @@ searchbtn.addEventListener("click",(e)=>{
             recipeContainer.innerHTML=`<h2>Type a meal in the search box.</h2>`
             return;
         }
+    
     fetchRecipes(searchvalue);
 })
