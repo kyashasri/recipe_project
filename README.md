@@ -8,6 +8,8 @@ Recipe Search: Users can search for recipes by keywords, discovering new and exc
 Detailed Recipe Information: Each recipe includes comprehensive details such as ingredients and instructions.
 
 ## Technologies Used
-HTML: For structuring the content.
+HTML: For structuring the content.            
+<br/>
 CSS: For styling the application and ensuring a responsive design.
+<br/>
 JavaScript: For implementing interactive features and making API calls to retrieve recipe data.
